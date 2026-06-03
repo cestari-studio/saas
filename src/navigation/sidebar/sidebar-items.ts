@@ -1,8 +1,10 @@
 import {
   Banknote,
+  Bell,
   Calendar,
   ChartBar,
   Fingerprint,
+  FolderKanban,
   Forklift,
   Gauge,
   GraduationCap,
@@ -14,6 +16,8 @@ import {
   Mail,
   MessageSquare,
   ReceiptText,
+  Settings,
+  Share2,
   ShoppingBag,
   SquareArrowUpRight,
   Users,
@@ -94,50 +98,86 @@ export const sidebarItems: NavGroup[] = [
   },
   {
     id: 2,
-    label: "Pages",
+    label: "Social Media",
     items: [
+      {
+        title: "Posts",
+        url: "/dashboard/posts",
+        icon: Share2,
+        isNew: true,
+      },
+      {
+        title: "Chat IA",
+        url: "/dashboard/chat",
+        icon: MessageSquare,
+        isNew: true,
+      },
+      {
+        title: "Calendário",
+        url: "/dashboard/calendar",
+        icon: Calendar,
+        isNew: true,
+      },
+      {
+        title: "Kanban",
+        url: "/dashboard/kanban",
+        icon: Kanban,
+        isNew: true,
+      },
+    ],
+  },
+  {
+    id: 3,
+    label: "Gerenciamento",
+    items: [
+      {
+        title: "Faturas",
+        url: "/dashboard/invoices",
+        icon: ReceiptText,
+        isNew: true,
+      },
+      {
+        title: "Usuários",
+        url: "/dashboard/users",
+        icon: Users,
+      },
+      {
+        title: "Papéis",
+        url: "/dashboard/roles",
+        icon: Lock,
+        isNew: true,
+      },
+      {
+        title: "Projetos",
+        url: "/dashboard/projects",
+        icon: FolderKanban,
+        isNew: true,
+      },
+    ],
+  },
+  {
+    id: 4,
+    label: "Configurações",
+    items: [
+      {
+        title: "Notificações",
+        url: "/dashboard/notifications",
+        icon: Bell,
+        isNew: true,
+      },
+      {
+        title: "Configurações",
+        url: "/dashboard/settings",
+        icon: Settings,
+        isNew: true,
+      },
       {
         title: "Email",
         url: "/dashboard/mail",
         icon: Mail,
       },
       {
-        title: "Chat",
-        url: "/dashboard/coming-soon",
-        icon: MessageSquare,
-        comingSoon: true,
-      },
-      {
-        title: "Calendar",
-        url: "/dashboard/coming-soon",
-        icon: Calendar,
-        comingSoon: true,
-      },
-      {
-        title: "Kanban",
-        url: "/dashboard/coming-soon",
-        icon: Kanban,
-        comingSoon: true,
-      },
-      {
-        title: "Invoice",
-        url: "/dashboard/coming-soon",
-        icon: ReceiptText,
-        comingSoon: true,
-      },
-      {
-        title: "Users",
-        url: "/dashboard/users",
-        icon: Users,
-      },
-      {
-        title: "Roles",
-        url: "/dashboard/coming-soon",
-        icon: Lock,
-        comingSoon: true,
-      },
-      {
-        title: "Authentication",
+        title: "Autenticação",
         url: "/auth",
         icon: Fingerprint,
         subItems: [
@@ -150,7 +190,7 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     label: "Legacy",
     items: [
       {
@@ -166,11 +206,11 @@ export const sidebarItems: NavGroup[] = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     label: "Misc",
     items: [
       {
-        title: "Others",
+        title: "Outros",
         url: "/dashboard/coming-soon",
         icon: SquareArrowUpRight,
         comingSoon: true,
